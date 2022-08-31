@@ -1,0 +1,266 @@
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background: var(--backgrond);
+}
+
+.header-mobile{
+    border-bottom: 1px solid var(--border);
+    padding: 37px 25px 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#burguer-close{
+    display: none;
+}
+
+.menu-open{
+    position: relative;
+    animation-duration: 1s;
+    display: none;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-link{
+    margin-left: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--border-menu-mobile);
+}
+
+a:active{
+    opacity: 0.3;
+}
+
+.active{
+    margin-left: 25px;
+    font-weight: 700;
+    color: var(--text-color-menu-mobile);
+}
+
+.rectangle-link-active{
+    height: 56px;
+    width: 5px;
+    background: var(--button);
+}
+
+@keyframes sidebar-open {
+    from {
+       right: -100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes sidebar-close {
+    from {
+       right: 0%;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+.main-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 108px;
+    padding: 0px 10px;
+}
+
+.main-mobile h3{
+    margin: 88px 28px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    max-width: 373px;
+}
+
+.main-mobile button, .header-desktop button{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--button);
+    width: 174px;
+    border-radius: 6px;
+    justify-content: center;
+    background: transparent;
+}
+
+.main-mobile button span, .header-desktop button span {
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+.header-desktop button span{
+    margin-right: 0;
+}
+
+.main-mobile button:hover{
+    opacity: 0.5;
+}
+
+main h1{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    letter-spacing: -0.03em;
+
+    color: var(--text-color);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    margin-bottom: 6px;
+}
+
+main h2{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    
+    letter-spacing: -0.03em;
+
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.blur-left{
+    display: none;
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    left: 0;
+    bottom: 0;
+
+    background: #996DFF;
+    filter: blur(210px);
+    z-index: -1;
+}
+
+.blur-right{
+    display: none;
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    right: 0;
+    top: 0;
+
+    background: #996DFF;
+    filter: blur(210px);
+    z-index: -1;
+}
+
+.blur-mobile{
+    position: absolute;
+    width: 100%;
+    height: 321px;
+    bottom: -303px;
+    background: #996DFF;
+    filter: blur(300px);
+    z-index: -1;
+}
+
+.container-img-rocket-coffee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-img-rocket-coffee img{
+    width: 100%;
+}
+
+.header-desktop{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.header-desktop nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0 140px;
+}
+
+.header-desktop nav ul li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+    .container-img-rocket-coffee img{
+        width: 60%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header-mobile, .main-mobile, .blur-mobile{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .header-desktop{
+        display: flex;
+    }
+
+    main h1, main h2{
+        font-size: 80px;
+        line-height: 109px;
+    }
+
+    .blur-right, .blur-left {
+        display: block;
+    }
+}
+
+
