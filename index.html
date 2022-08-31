@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+    <title>RocketCoffee</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-mobile">
+            <img class="logo-mobile" src="./imgs/logo-mobile.svg" alt="Logo mobile">
+            <a onclick="handleSideBar()">
+                <img id="burguer-open" src="./imgs/menu-buguer-open.svg" alt="Abrir menu mobile">
+                <img id="burguer-close" src="./imgs/menu-buguer-close.svg" alt="Fechar menu mobile">
+            </a>
+        </div>
+        <div class="header-desktop">
+            <img src="/imgs/logo-desktop.svg" alt="Logo desktop">
+            <nav>
+                <ul>
+                    <a><li>Home</li></a>
+                    <a><li>Menu</li></a>
+                    <a><li>Recompensas</li></a>
+                    <a><li>Gift Cards</li></a>
+                    <a><li>Lojas</li></a>
+                </ul>
+            </nav>
+            <button>
+                <span>Pegar meu café</span>
+            </button>
+        </div>
+    </header>
+    <ul class="menu-open" id="menu-open">
+        <li class="menu-item item-active">
+            <div class="rectangle-link-active"></div>
+            <a href="" class="menu-link active">Home</a>
+        </li>
+        <li class="menu-item">
+            <a href="" class="menu-link">Menu</a>
+        </li>
+        <li class="menu-item">
+            <a href="" class="menu-link">Recompensas</a>
+        </li>
+        <li class="menu-item">
+            <a href="" class="menu-link">Gift Cards</a>
+        </li>
+        <li class="menu-item">
+            <a href="" class="menu-link">Lojas</a>
+        </li>
+    </ul>
+    <main id="main">
+        <section class="main-mobile">
+            <h3>
+                O café que fará seu código decolar para o próximo nível.
+            </h3>
+            <button>
+                <span>Pegar meu café</span>
+                <img src="./imgs/arrow.svg" alt="Seta botão pegar café">
+            </button>
+        </section>
+
+        <h1>Great Coffee</h1>
+        <h2>&lt;Great Code/&gt;</h2>
+
+        <div class="container-img-rocket-coffee">
+            <img src="/imgs/rocket-coffee.svg">
+        </div>
+        <div class="blur-left"></div>
+        <div class="blur-right"></div>
+        <div class="blur-mobile"></div>
+    </main>
+</body>
+</html>
